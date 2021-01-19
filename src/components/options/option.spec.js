@@ -18,8 +18,18 @@ describe('Options.vue', () => {
     })
 
 
-    it('should, when clicked and no elements are selected, select the element', () => {
-        
+    it('should, when clicked and no elements are selected, select the element', async () => {
+        const wrapper = shallowMount(Options)
+		const expectedSelectedBefore = 0, expectedSelectedAfter = 1
+
+		const actualSelectedBefore = wrapper.findAll('.option.selected').length
+		const first = wrapper.find('.option');
+		await first.trigger('click');
+
+		const actualSelectedAfter = wrapper.findAll('.option.selected').length
+
+		expect(actualSelectedBefore).toBe(expectedSelectedBefore)
+		expect(actualSelectedAfter).toBe(expectedSelectedAfter)
     })
 
 
