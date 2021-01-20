@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils';
-import Buttons from './Buttons.vue'
+import Buttons from './ShowHide.vue'
 
 describe('Buttons.vue', () => {
     it('should show the button with a specific text when mounted', () => {
