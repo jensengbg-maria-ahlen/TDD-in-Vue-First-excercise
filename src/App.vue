@@ -5,7 +5,7 @@
         <Counter />
         <Option />
         <ShowHide />
-        <InputName v-model="name" @value="value" />
+        <InputName />
     </main>
 </template>
 
@@ -21,16 +21,6 @@ export default {
     components: {
         OnOff, Counter, Option, ShowHide, InputName
     },
-    data() {
-        return {
-            name: ""
-        }
-    },
-    methods: {
-        value(text) {
-            this.name = text
-        }
-    }
 }
 </script>
 

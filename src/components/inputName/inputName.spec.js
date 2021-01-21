@@ -20,10 +20,14 @@ describe('InputName.vue', () => {
         expect(textInput.element.value).toBe('maria')
     })
 
-/*
-    it('should', () => {
-        
-    })
-    */
 
+    it('should return the string with the first letter capitalized and the rest small', async () => {
+        const wrapper = shallowMount(InputName);
+        const expected = 'Maria';
+        
+        const textInput = wrapper.find('input[type="text"]');
+        await textInput.setValue('Maria');
+
+        expect(textInput.element.value).toBe(expected);
+    })
 })
