@@ -1,10 +1,10 @@
 <template>
     <div>
-        <div :class="{ 'option': true, 'selected': selectedIndex == 0 }" @click="select(0)"> Citron </div>
-        <div :class="{ 'option': true, 'selected': selectedIndex == 1 }" @click="select(1)"> Banan </div>
-        <div :class="{ 'option': true, 'selected': selectedIndex == 2 }" @click="select(2)"> Ananas </div>
-        <div :class="{ 'option': true, 'selected': selectedIndex == 3 }" @click="select(3)"> Äpple </div>
-        <div :class="{ 'option': true, 'selected': selectedIndex == 4 }" @click="select(4)"> Päron </div>
+        <div :class="{ 'option': true, 'selected': selectedIndex == 0 }" @click="select(0)"> {{items[0]}} </div>
+        <div :class="{ 'option': true, 'selected': selectedIndex == 1 }" @click="select(1)"> {{items[1]}} </div>
+        <div :class="{ 'option': true, 'selected': selectedIndex == 2 }" @click="select(2)"> {{items[2]}} </div>
+        <div :class="{ 'option': true, 'selected': selectedIndex == 3 }" @click="select(3)"> {{items[3]}} </div>
+        <div :class="{ 'option': true, 'selected': selectedIndex == 4 }" @click="select(4)"> {{items[4]}} </div>
     </div>
 </template>
 
@@ -17,7 +17,18 @@ export default {
     methods: {
         select(index) {
             this.selectedIndex = index;
-        }
+
+            this.items.forEach( item => {
+                console.log(item)
+
+                /*
+                let existingObject = this.items.find(i => i.item.index === item.id);
+                if(existingObject) {
+                    console.log(existingObject);
+                }
+                */
+            })
+        },
     }
 }
 </script>
