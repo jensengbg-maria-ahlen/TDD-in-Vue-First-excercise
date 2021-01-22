@@ -5,6 +5,9 @@
         <Counter />
         <Option />
         <InputName />
+        <ShowHide />
+        <Tabs />
+        <Chuck />
     </main>
 </template>
 
@@ -13,11 +16,14 @@ import OnOff from './components/onoff/OnOff.vue'
 import Counter from './components/counter/Counter.vue'
 import Option from './components/options/option.vue'
 import InputName from './components/inputName/InputName.vue'
+import Chuck from './components/mock-ajax/ChuckNorris';
+import ShowHide from './components/showHide/ShowHide';
+import Tabs from './components/tabs/Tabs';
 
 export default {
     name: 'App',
     components: {
-        OnOff, Counter, Option, InputName
+        OnOff, Counter, Option, InputName, Chuck, ShowHide, Tabs,
     },
 }
 </script>
