@@ -4,9 +4,7 @@
         <OnOff />
         <Counter />
         <Option />
-        <ShowHide />
         <InputName />
-        <Tabs />
     </main>
 </template>
 
@@ -14,14 +12,12 @@
 import OnOff from './components/onoff/OnOff.vue'
 import Counter from './components/counter/Counter.vue'
 import Option from './components/options/option.vue'
-import ShowHide from './components/showHide/ShowHide.vue'
 import InputName from './components/inputName/InputName.vue'
-import Tabs from './components/tabs/Tabs.vue'
 
 export default {
     name: 'App',
     components: {
-        OnOff, Counter, Option, ShowHide, InputName, Tabs
+        OnOff, Counter, Option, InputName
     },
 }
 </script>
