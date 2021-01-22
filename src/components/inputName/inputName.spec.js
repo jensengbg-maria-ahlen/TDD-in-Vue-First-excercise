@@ -26,7 +26,7 @@ describe('InputName.vue', () => {
         const expected = 'Maria';
         
         const textInput = wrapper.find('input[type="text"]');
-        await textInput.setValue('Maria');
+        await textInput.setValue('maria');
 
         expect(textInput.element.value).toBe(expected);
     })

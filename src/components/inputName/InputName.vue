@@ -15,7 +15,12 @@ export default {
     computed: {
         textInfo() {
             return this.localValue
+        },
+/*
+        capitalize() {
+
         }
+*/
     }
 }
 </script>
